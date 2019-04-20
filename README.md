@@ -1,1 +1,1 @@
-# TriviaGame
+This game utilizes Javascript, jQuery, and timers to create a quiz, where the player has 1 minute to complete the questions.

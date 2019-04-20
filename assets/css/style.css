@@ -1,0 +1,14 @@
+h1 {
+    font-size: 50px;
+}
+
+body {    
+    text-align: center;
+    font-size: 20px;
+    background-color:#fadadd;
+    font-family: futura;
+}
+
+#timer {
+    font-size: 30px;
+}
