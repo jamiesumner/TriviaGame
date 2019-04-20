@@ -1,17 +1,17 @@
 var questions = [
     {
-        Question: "What is the capital of Massachusetts?",
-        Answers: ["A. Worcester", "B. Boston", "C. Springfield", "D. Lowell"],
+        question: "What is the capital of Massachusetts?",
+        answers: ["A. Worcester", "B. Boston", "C. Springfield", "D. Lowell"],
         correctAnswer: "B. Boston"
     },
     {
-        Question: "What is the capital of Kansas?",
-        Answers: ["A. Kansas City", "B. Wichita", "C. Topeka", "D. Overland Park"],
+        question: "What is the capital of Kansas?",
+        answers: ["A. Kansas City", "B. Wichita", "C. Topeka", "D. Overland Park"],
         correctAnswer: "C. Topeka"
     },
     {
-        Question: "What is the capital of Iowa?",
-        Answers: ["A. Des Moines", "B. Iowa City", "C. Davenport", "D. Cedar Rapids"],
+        question: "What is the capital of Iowa?",
+        answers: ["A. Des Moines", "B. Iowa City", "C. Davenport", "D. Cedar Rapids"],
         correctAnswer: "A. Des Moines"
     }
 ]
@@ -35,11 +35,11 @@ var game = {
         $("#quiz").html("")
         timer = setInterval(game.countdown, 1000)
         for (var i = 0; i < questions.length; i++) {
-            $("#quiz").append("<h2>" + questions[i].Question + "</h2>")
-            $("#quiz").append("<input type='radio' name='question-0'>" + questions[i].Answers[0] + "<br>")
-            $("#quiz").append("<input type='radio' name='question-1'>" + questions[i].Answers[1] + "<br>")
-            $("#quiz").append("<input type='radio' name='question-2'>" + questions[i].Answers[2] + "<br>")
-            $("#quiz").append("<input type='radio' name='question-3'>" + questions[i].Answers[3] + "<br><br>")
+            $("#quiz").append("<h2>" + questions[i].question + "</h2>")
+            $("#quiz").append("<input type='radio' name='question-0'>" + questions[i].answers[0] + "<br>")
+            $("#quiz").append("<input type='radio' name='question-1'>" + questions[i].answers[1] + "<br>")
+            $("#quiz").append("<input type='radio' name='question-2'>" + questions[i].answers[2] + "<br>")
+            $("#quiz").append("<input type='radio' name='question-3'>" + questions[i].answers[3] + "<br><br>")
         }
         $("#quiz").append("<button id='finish'>Finish</button>")
     },
@@ -74,7 +74,7 @@ var game = {
 
     },
     result: function () {
-        $("#quiz").html("<h2>All done</h2>")
+        $("#quiz").html("<h2>You're done!</h2>")
         $("#quiz").append("<h3>Correct answers: " + this.correct + "</h3>")
         $("#quiz").append("<h3>Incorrect answers: " + this.incorrect + "</h3>")
         $("#quiz").append("<h3>Unanswered: " + (questions.length - (this.incorrect + this.correct)) + "</h3>")
